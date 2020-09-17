@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        foreach(Sound s in sounds)
+        foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
@@ -31,17 +31,17 @@ public class AudioManager : MonoBehaviour
 
     public IEnumerator Play(string name, float Fadein, float increaseAmount)
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
-        if (s == null)
-        {
-            Debug.LogError("Sound with name: " + name + " not be found!");
-        }
-        s.source.Play();
-        s.source.volume = 0;
-        while (s.source.volume <= Fadein)
-        {
-            s.source.volume += increaseAmount;
-            yield return new WaitForSeconds(.1f);
-        }
+            Sound s = Array.Find(sounds, sound => sound.name == name);
+            if (s == null)
+            {
+                Debug.LogError("Sound with name: " + name + " not be found!");
+            }
+            s.source.Play();
+            s.source.volume = 0;
+            while (s.source.volume <= Fadein)
+            {
+                s.source.volume += increaseAmount;
+                yield return new WaitForSeconds(.1f);
+            }
     }
 }

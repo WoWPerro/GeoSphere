@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Story
   - Arcade
+  - Good
+  - Kill
   layers:
   - Default
   - TransparentFX
