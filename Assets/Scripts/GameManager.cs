@@ -17,6 +17,11 @@ public class GameManager : MonoBehaviour
         scene = SceneManager.GetActiveScene();
     }
 
+    private void Awake()
+    {
+        win = false;
+    }
+
     // Update is called once per frame
     void Update()
     {

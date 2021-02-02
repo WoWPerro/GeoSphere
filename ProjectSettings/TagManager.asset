@@ -8,6 +8,8 @@ TagManager:
   - Arcade
   - Good
   - Kill
+  - Accelerate
+  - Accelerate2
   layers:
   - Default
   - TransparentFX
